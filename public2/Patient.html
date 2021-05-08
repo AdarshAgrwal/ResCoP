@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ResCoP</title>
+    <link rel="icon" href="/public/img/favicon.png">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+    
+        <!--Import Font Awesome Icon Font-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    
+        <!--Import materialize.css-->
+        <link rel="stylesheet" type="text/css" href="/public/static/css/materialize.min.css">
+    
+        <!--Main css-->
+        <link rel="stylesheet" type="text/css" href="/public/static/css/style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/public/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/public/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="/public/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="/public/css/flaticon.css">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="/public/css/magnific-popup.css">
+    <!-- nice select CSS -->
+    <link rel="stylesheet" href="/public/css/nice-select.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="/public/css/slick.css">
+    <!-- style CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="/public/css/style1.css">
+    <script src="/public/js/cities.js"></script>
+    
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="/"> <img src="/public/img/logo.png" alt="logo" style="margin-right: 5px;">ResCoP</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a class="nav-link" href="services.html">Services</a>
+                                </li>
+                                 -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Patient.html">Patient</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Dealer
+                                    </a>
+                                    <div class="dropdown-menu" style="font-family: Playfair Display, serif;font-size: 14px;" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="login.html">Login</a>
+                                      <a class="dropdown-item" href="signup.html">Signup</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                       
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+<section class="appointment">
+<div class="container">
+    <div class="row align-items-center justify-content-center"> 
+        <div class="col-6">
+<form id="patientForm">
+  <h6 > Personal Details </h6><hr style="padding-bottom: 15px;"/>
+    <div class="form-group row">
+      <label for="patientname" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="patientname" name="patientname" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="patientdate" class="col-sm-2 col-form-label">DOB</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="patientdate" name="patientdate" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="patientemail" class="col-sm-2 col-form-label">E-mail</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="patientemail" name="patientemail" required>
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="patientno" class="col-sm-2 col-form-label">Phone Number</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="patientno" name="patientno" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="aadharno" class="col-sm-2 col-form-label">Aadhar No.</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="aadharno" name="aadharno" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Occupation" class="col-sm-2 col-form-label">Prof.</label>
+        <div class="col-sm-10">
+          <select class="form-control" name= "Occupation" id="Occupation" required>
+            <option value="Organization">Organization</option>
+            <option value="NGO">NGO</option>
+            <option value="Hospital">Hospital</option>
+            <option value="Individual">Individual</option>
+          </select>
+        </div>
+      </div>
+
+      <h6 > Location </h6><hr style="padding-bottom: 15px;"/>
+      <div class="form-group row">
+        <label for="State" class="col-sm-2 col-form-label">State</label>
+        <div class="col-sm-10">
+          <!-- <input type="text" class="form-control" id="State" name="State" required> -->
+          <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="City" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+         
+          <select id ="state" class="form-control" required></select>
+          <script language="javascript">print_state("sts");</script>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Pincode" class="col-sm-2 col-form-label">Pin Code</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Pincode" name="Pincode" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Bloodgrp" class="col-sm-2 col-form-label">Blood Group</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="Bloodgrp" name="Bloodgrp" required>
+        </div>
+      </div>
+      
+
+      <h6 > Requirement </h6><hr style="padding-bottom: 15px;"/>
+      <div class="form-group row">
+        <label for="oxygen" class="col-sm-2 col-form-label">Oxygen</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="checkbox" id="oxygen" name="oxygen" value="Oxygen">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="plasma" class="col-sm-2 col-form-label">Plasma</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="checkbox" id="plasma" name="plasma" value="Plasma">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="remdisiver" class="col-sm-2 col-form-label">Remdisiver</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="checkbox" id="remdisiver" name="remdisiver" value="Remdisiver">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="tocilizumab" class="col-sm-2 col-form-label">Tocilizumab</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="checkbox" id="tocilizumab" name="tocilizumab" value="Tocilizumab" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="beds" class="col-sm-2 col-form-label">Beds</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="checkbox" id="beds" name="beds" value="Beds">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="meals" class="col-sm-2 col-form-label">Meals</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="checkbox" id="meals" name="meals" value="Meals">
+        </div>
+      </div>
+      
+    
+    <div class="form-group row">
+        
+      <div class="col-sm-10">
+        <button type="button"  class="btn btn-primary" onclick="getPatientData()">Submit</button>
+      </div>
+    </div>
+    
+  </form>
+</div>
+<!-- <div class="col-12 col-sm-5 d-flex justify-content-center">
+    <img src="/public//img/appointment.jpeg">
+</div> -->
+    </div>
+</div>
+</section>
+   
+<!-- footer part start-->
+<footer class="footer-area">
+  <div class="footer section_padding" style="padding: 50px 0px;">
+      <div class="container">
+          <div class="row justify-content-between">
+              <div class="col-md-4 col-sm-4 single-footer-widget">
+                  <a href="#" class="footer_logo"> <img src="./public/img/logo.png" alt="#"> ResCoP </a>
+                  <p>Looking at a flood of stories on Instagram, a couple of friends decided to create an online platform dedicated to collecting requests from patients and connecting them to dealers, according to locality.<br>
+                       ResCoP is completely free, and is just an attempt to amplify the pleas of help by those affected. It is much more organized than sharing numbers on WhatsApp and Instagram, and is easier for both the patients and the dealers.</p>
+                  <div class="social_logo">
+                      <a href="#"><i class="ti-facebook"></i></a>
+                      <!-- <a href="#"> <i class="ti-twitter"></i> </a> -->
+                      <a href="https://www.instagram.com/res__cop/"><i class="ti-instagram"></i></a>
+                      <!-- <a href="#"><i class="ti-skype"></i></a> -->
+                  </div>
+              </div>
+              <div class="col-sm-4 col-md-4 single-footer-widget ">
+                  <div>
+                      <h4>Quick Links</h4>
+                      <ul>
+                          <li ><a href="index.html">Home</a></li>
+                          <li><a href="Patient.html"> Patient Sign-Up</a></li>
+                          <li><a href="signup.html"> Supplier Sign-Up</a></li>
+                          <li><a href="login.html">Supplier Login</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-sm-4 col-md-4 single-footer-widget">
+                      <h4 style="margin-bottom: 2%;">Our Mission</h4>
+                      <p>To help the citizens of India get the resources they need by giving them a platform to request for help. We'd like to collect all requests and make them more visible so that dealers can then supply the required materials, be it oxygen cylinders or medicine and injections.<br></p>
+                      <h4 style="margin-bottom: 2%;">Our Vision</h4>
+                      <p>We only hope to remedy the critical situation of India, as covid cases are skyrocketing. We sincerely hope the affected patients will get the required help they need and the citizens of our country remai</p>    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="copyright_part">
+      <div class="container">
+          <div class="row align-items-center">
+              <p class="footer-text m-0 col-lg-8 col-md-12" style="color: white;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="#about_us">US</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+              <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                  <a href="#"><i class="ti-facebook"></i></a>
+                  <!-- <a href="#"> <i class="ti-twitter"></i> </a> -->
+                  <a href="https://www.instagram.com/res__cop/"><i class="ti-instagram"></i></a>
+                  <!-- <a href="#"><i class="ti-skype"></i></a> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- footer part end-->
+
+
+<!-- jquery plugins here-->
+
+<script src="/public/js/jquery-1.12.1.min.js"></script>
+<!-- popper js -->
+<script src="/public/js/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="/public/js/bootstrap.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!-- owl carousel js -->
+<script src="/public/js/owl.carousel.min.js"></script>
+<script src="/public/js/jquery.nice-select.min.js"></script>
+
+
+
+<!-- Sweet Alert js -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/static/js/materialize.min.js"></script>
+
+<!--Main Script -->
+<script type="text/javascript" src="/public/static/js/script.js"></script>
+
+<!--Chart.js Script -->
+<script type="text/javascript" src="/public/static/js/chart.min.js"></script>
+
+<!-- Data AOS -->
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+<script src="/public/js/patient.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+
+</html>
+
+    <!-- <script>
+      function thankYou () {
+        var meetingurl = "https://us04web.zoom.us/j/73799621619?pwd=QlJEU0tKK1RuRXhVS3lvYjRuRTA3UT09"
+        var meetingpass = "Psy-Health"
+        var timing = document.getElementById("patienttime").value
+        var day = document.getElementById("patientdate").value
+        var email = document.getElementById("patientemail").value
+       
+        var day = document.getElementById("patientdate").value
+        var mailSubject = "Appointment Details";
+        var mailBody = "Your Appointment is scheduled on "+day+" at "+timing+". Kindly use the mentioned link. "+meetingurl;
+        swal("Thank You!", "You have successfully signed up", "success")
+          setTimeout(function(){
+            window.location.href = "/";
+          },5000)
+          Email.send({
+            
+    SecureToken : "960572bc-f94b-49e8-84c2-952feb2132a2",     
+    To : email,
+    From : "psyhealth27@gmail.com",
+    Subject : mailSubject,
+    Body : mailBody
+})
+          return true
+      } 
+    </script> -->
