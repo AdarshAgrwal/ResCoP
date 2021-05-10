@@ -94,7 +94,7 @@ setTimeout(()=>{
 
 
 function apply(elem){   
-    // console.log(patientData)
+    // console.log(patientData)zz
     // console.log(patientKeys)
     var dealermail=(elem.parentNode.getElementsByTagName("h4")[0].innerHTML)
     // console.log(dealermail)
