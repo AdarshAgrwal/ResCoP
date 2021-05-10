@@ -19,6 +19,31 @@ var firebaseConfig = {
       
     }
   })
+  $(document).ready(function() {
+    validate();
+    $('input').on('keyup', validate);
+    $("#submitButton").on('click',getDealerInfo)
+  });
+  
+  function validate() {
+    var inputsWithValues = 0;
+    
+    // get all input fields except for type='submit'
+    var myInputs = $("input:not([type='checkbox'])");
+  
+    myInputs.each(function(e) {
+      // if it has a value, increment the counter
+      if ($(this).val()) {
+        inputsWithValues += 1;
+      }
+    });
+  
+    if (inputsWithValues == myInputs.length) {
+      $("#submitButton").prop("disabled", false);
+    } else {
+      $("#submitButton").prop("disabled", true);
+    }
+  }
 
   function getDealerInfo(){
     var dealerName = document.getElementById("dealername").value
