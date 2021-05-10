@@ -9,7 +9,31 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig); 
 
+$(document).ready(function() {
+  validate();
+  $('input').on('keyup', validate);
+  $("#submitButton").on('click',getPatientData)
+});
 
+function validate() {
+  var inputsWithValues = 0;
+  
+  // get all input fields except for type='submit'
+  var myInputs = $("input:not([type='checkbox'])");
+
+  myInputs.each(function(e) {
+    // if it has a value, increment the counter
+    if ($(this).val()) {
+      inputsWithValues += 1;
+    }
+  });
+
+  if (inputsWithValues == myInputs.length) {
+    $("#submitButton").prop("disabled", false);
+  } else {
+    $("#submitButton").prop("disabled", true);
+  }
+}
 
 function getPatientData(){
 
@@ -99,7 +123,7 @@ Email:patientEmail,
 Phone: patientNo,
 BloodGrp: patientBloodGrp,
 AadharNo: patientAadhar,
-
+Occupation:patientOccupation
 
 }
 var location = {
@@ -122,6 +146,5 @@ firebaseRef.push(data, function(){
    
 window.location = "./dealer-list.html"
 })
-
 
 }
