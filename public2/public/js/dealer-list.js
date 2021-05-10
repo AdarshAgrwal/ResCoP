@@ -56,11 +56,14 @@ patientDb.on("value",(data)=>{
     patientKeys = Object.keys(patientData)
 })
 
+var count = 0
+
 setTimeout(()=>{
-    var rootaf = document.getElementById("rootaf")
     registeredKeys.forEach((key)=>{
+        var rootaf = document.getElementById("rootaf")
         if(registeredData[key].Location.State === state && registeredData[key].Location.City === city ){
             // console.log(true)
+            count += 1 
             services = []
             if (registeredData[key].Services.Beds === true){
                 services.push("Beds")
@@ -91,23 +94,27 @@ setTimeout(()=>{
     })
 },3000)
 
+setTimeout(()=>{
+    var root = document.getElementById("root")
+    if (count==0){
+        root.innerHTML = `<div style = "padding: 50px 0 ;" class="text-center">
+            <h4 > Sorry, There are no distributors available in your city right now.</h4>
+            <p> Please Try again after sometime </p>
+        </div>`
+    }
+},3111)
 
 
 function apply(elem){   
-    // console.log(patientData)zz
-    // console.log(patientKeys)
     var dealermail=(elem.parentNode.getElementsByTagName("h4")[0].innerHTML)
-    // console.log(dealermail)
     patientKeys.forEach((key)=>{
         if(patientData[key].PersonalInfo.AadharNo === no){
             patientId = (key)
-            // console.log(patientId)
         }
     })
     registeredKeys.forEach((key)=>{
         if(registeredData[key].PersonalInfo.Email === dealermail){
             DealerId = (key)
-            // console.log(DealerId)
         }
     })
     let dealer_ref = firebase.database().ref('Dealers/' + DealerId + '/Customers/'+Date.now())
@@ -119,5 +126,7 @@ function apply(elem){
                   console.log("added")
               })
     })
+
+    swal("Request Sent", "Please wait for the supplier to contant you!!", "success");
     
 }
