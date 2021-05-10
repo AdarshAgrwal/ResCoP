@@ -86,7 +86,7 @@ setTimeout(()=>{
                 <h4 style="display:none">${registeredData[key].PersonalInfo.Email}<h4>
                     <h4>Name: ${registeredData[key].PersonalInfo.Name}</h4> 
                     <p style="word-break: break-word;">Services: ${services} </p>
-                    <button class="btn btn-primary float-right" onclick="apply(this)">Apply</button> 
+                    <button class="btn btn-primary float-right" id="applybtn" onclick="apply(this)">Apply</button> 
                 </div>
                </div>
             </div>`
@@ -127,6 +127,9 @@ function apply(elem){
               })
     })
 
-    swal("Request Sent", "Please wait for the supplier to contant you!!", "success");
+    swal("Request Sent", "Please wait for the supplier to contact you!!", "success");
+  
+    elem.disabled=true
+      
     
 }
