@@ -21,8 +21,14 @@ var firebaseConfig = {
             // document.getElementById('sts').value = data.val().Location.State
             // document.getElementById('state').value = data.val().Location.City
             // document.getElementById('Pincode').value = data.val().Location.Pincode
-            if (data.val().Services.Oxygen == true){
-                document.getElementById('oxygen').checked = true
+            if (data.val().Services.OxygenCylinder == true){
+                document.getElementById('oxygencylinder').checked = true
+            }
+            if (data.val().Services.EmptyCylinder == true){
+                document.getElementById('emptycylinder').checked = true
+            }
+            if (data.val().Services.Concentrator == true){
+                document.getElementById('concentrator').checked = true
             }
             if (data.val().Services.Plasma == true){
                 document.getElementById('Plasma').checked = true
@@ -69,14 +75,33 @@ function updateInfo(){
             console.log(Tocilizumab)
         }
 
-        var Oxygen = document.getElementById("oxygen")
-        if (Oxygen.checked){
-            Oxygen=true
-        console.log(Oxygen)
+        var oxygenCylinder = document.getElementById("oxygencylinder")
+        if (oxygenCylinder.checked){
+        oxygenCylinder=true
+        console.log(oxygenCylinder)
         }
         else{
-            Oxygen=false
-            console.log(Oxygen)
+        oxygenCylinder=false
+        console.log(oxygenCylinder)
+        }
+        var emptyCylinder = document.getElementById("emptycylinder")
+        if (emptyCylinder.checked){
+        emptyCylinder=true
+        console.log(emptyCylinder)
+        }
+        else{
+        emptyCylinder=false
+        console.log(emptyCylinder)
+        }
+        
+        var Concentrator = document.getElementById("concentrator")
+        if (Concentrator.checked){
+        Concentrator=true
+        console.log(Concentrator)
+        }
+        else{
+        Concentrator=false
+        console.log(Concentrator)
         }
 
         var Plasma = document.getElementById("Plasma")
@@ -116,7 +141,9 @@ function updateInfo(){
                 'Phone' : dealerNo
             })
             userRef.child('Services').update({
-                'Oxygen':Oxygen,
+                'OxygenCylinder':oxygenCylinder,
+                'EmptyCylinder':emptyCylinder,
+                'Concentrator':Concentrator,
                 'Plasma':Plasma,
                 'Remdisiver':Remdisiver,
                 'Tocilizumab':Tocilizumab,

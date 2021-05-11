@@ -59,6 +59,7 @@ var firebaseConfig = {
    
     
     console.log(password,confirmpassword)
+
     var Remdisiver = document.getElementById("remdisiver")
     if (Remdisiver.checked){
       Remdisiver=true
@@ -79,14 +80,33 @@ var firebaseConfig = {
       console.log(Tocilizumab)
     }
     
-    var Oxygen = document.getElementById("oxygen")
-    if (Oxygen.checked){
-      Oxygen=true
-    console.log(Oxygen)
+    var oxygenCylinder = document.getElementById("oxygencylinder")
+    if (oxygenCylinder.checked){
+    oxygenCylinder=true
+    console.log(oxygenCylinder)
     }
     else{
-      Oxygen=false
-      console.log(Oxygen)
+    oxygenCylinder=false
+    console.log(oxygenCylinder)
+    }
+    var emptyCylinder = document.getElementById("emptycylinder")
+    if (emptyCylinder.checked){
+    emptyCylinder=true
+    console.log(emptyCylinder)
+    }
+    else{
+    emptyCylinder=false
+    console.log(emptyCylinder)
+    }
+    
+    var Concentrator = document.getElementById("concentrator")
+    if (Concentrator.checked){
+    Concentrator=true
+    console.log(Concentrator)
+    }
+    else{
+    Concentrator=false
+    console.log(Concentrator)
     }
     
     var Plasma = document.getElementById("Plasma")
@@ -166,7 +186,9 @@ firebase.auth().onAuthStateChanged(user => {
     
     }
     var request = {
-      Oxygen:Oxygen,
+      OxygenCylinder:oxygenCylinder,
+      EmptyCylinder:emptyCylinder,
+      Concentrator:Concentrator,
       Plasma:Plasma,
       Remdisiver:Remdisiver,
       Tocilizumab:Tocilizumab,

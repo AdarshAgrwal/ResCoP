@@ -42,9 +42,13 @@ function logout() {
             services.push("Beds")
         }if (data.val().Request.Meals === true){
             services .push("Meals")
-        }if (data.val().Request.Oxygen === true){
-            services .push("Oxygen")
-        }if (data.val().Request.Plasma === true){
+        }if (data.val().Request.OxygenCylinder === true){
+            services .push("Oxygen Cylinder")
+        }if (data.val().Request.EmptyCylinder === true){
+          services .push("Empty Cylinder")
+      }if (data.val().Request.Concentrator === true){
+        services .push("Concentrator")
+    }if (data.val().Request.Plasma === true){
             services .push("Plasma")
         }if (data.val().Request.Remdisiver === true){
             services .push("Remdisiver")

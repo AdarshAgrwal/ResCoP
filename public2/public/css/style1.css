@@ -245,7 +245,7 @@ html{
   
   /**************** banner part css start ****************/
 .banner_part {
-  height: 935px;
+  
   position: relative;
   overflow: hidden;
   background-image: url(../img/banner_bg.png);
@@ -320,7 +320,7 @@ html{
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .banner_part .banner_text {
-    height: 650px;
+
   }
 }
 
@@ -414,6 +414,12 @@ html{
 }
 
 /**************** BANNER PART END ****************/
+
+
+#mission {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
 
 /**************** ABOUT US PART ****************/
 

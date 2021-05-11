@@ -75,14 +75,33 @@ Tocilizumab=false
 console.log(Tocilizumab)
 }
 
-var Oxygen = document.getElementById("oxygen")
-if (Oxygen.checked){
-Oxygen=true
-console.log(Oxygen)
+var oxygenCylinder = document.getElementById("oxygencylinder")
+if (oxygenCylinder.checked){
+oxygenCylinder=true
+console.log(oxygenCylinder)
 }
 else{
-Oxygen=false
-console.log(Oxygen)
+oxygenCylinder=false
+console.log(oxygenCylinder)
+}
+var emptyCylinder = document.getElementById("emptycylinder")
+if (emptyCylinder.checked){
+emptyCylinder=true
+console.log(emptyCylinder)
+}
+else{
+emptyCylinder=false
+console.log(emptyCylinder)
+}
+
+var Concentrator = document.getElementById("concentrator")
+if (Concentrator.checked){
+Concentrator=true
+console.log(Concentrator)
+}
+else{
+Concentrator=false
+console.log(Concentrator)
 }
 
 var Plasma = document.getElementById("plasma")
@@ -133,7 +152,9 @@ Pincode: patientPincode
 
 }
 var request = {
-Oxygen:Oxygen,
+OxygenCylinder:oxygenCylinder,
+EmptyCylinder:emptyCylinder,
+Concentrator:Concentrator,
 Plasma:Plasma,
 Remdisiver:Remdisiver,
 Tocilizumab:Tocilizumab,

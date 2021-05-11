@@ -69,8 +69,12 @@ setTimeout(()=>{
                 services.push("Beds")
             }if (registeredData[key].Services.Meals === true){
                 services .push("Meals")
-            }if (registeredData[key].Services.Oxygen === true){
-                services .push("Oxygen")
+            }if (registeredData[key].Services.OxygenCylinder === true){
+                services .push("Oxygen Cylinder")
+            }if (registeredData[key].Services.EmptyCylinder === true){
+                services .push("Empty Cylinder")
+            }if (registeredData[key].Services.Concentrator === true){
+                services .push("Oxygen Concentrator")
             }if (registeredData[key].Services.Plasma === true){
                 services .push("Plasma")
             }if (registeredData[key].Services.Remdisiver === true){
