@@ -15,8 +15,8 @@ var firebaseConfig = {
   var localStorageData = []
   let city = ""
   let state = ""
-  let no =sessionStorage.getItem("aadharno").toString()
-  console.log(no)
+//   let no =sessionStorage.getItem("aadharno").toString()
+//   console.log(no)
 
   for (let i = 0 ; i < localStorage.length ; i ++){
       var key = localStorage.key(i)
@@ -87,10 +87,9 @@ setTimeout(()=>{
             <div class=" col-12 col-md-6">
             <div class='card m-3'>
                 <div class='card-body'>
-                <h4 style="display:none">${registeredData[key].PersonalInfo.Email}<h4>
-                    <h4>Name: ${registeredData[key].PersonalInfo.Name}</h4> 
+                    <h4>Name: ${registeredData[key].PersonalInfo.Name}</h4>
+                    <p><b> Mobile No: ${registeredData[key].PersonalInfo.Phone}</b></p>
                     <p style="word-break: break-word;">Services: ${services} </p>
-                    <button class="btn btn-primary float-right" id="applybtn" onclick="apply(this)">Apply</button> 
                 </div>
                </div>
             </div>`
@@ -109,31 +108,29 @@ setTimeout(()=>{
 },3111)
 
 
-function apply(elem){   
-    var dealermail=(elem.parentNode.getElementsByTagName("h4")[0].innerHTML)
-    patientKeys.forEach((key)=>{
-        if(patientData[key].PersonalInfo.AadharNo === no){
-            patientId = (key)
-        }
-    })
-    registeredKeys.forEach((key)=>{
-        if(registeredData[key].PersonalInfo.Email === dealermail){
-            DealerId = (key)
-        }
-    })
-    let dealer_ref = firebase.database().ref('Dealers/' + DealerId + '/Customers/'+Date.now())
-    let patient_ref  = firebase.database().ref('Patients/'+patientId)
-    patient_ref.on("value", function(data){
-              console.log(data.val())
-              values = {[patientId]:data.val()}
-              dealer_ref.set(values,function(){
-                  console.log("added")
-              })
-    })
+// function apply(elem){   
+//     var dealermail=(elem.parentNode.getElementsByTagName("h4")[0].innerHTML)
+//     patientKeys.forEach((key)=>{
+//         if(patientData[key].PersonalInfo.AadharNo === no){
+//             patientId = (key)
+//         }
+//     })
+//     registeredKeys.forEach((key)=>{
+//         if(registeredData[key].PersonalInfo.Email === dealermail){
+//             DealerId = (key)
+//         }
+//     })
+//     let dealer_ref = firebase.database().ref('Dealers/' + DealerId + '/Customers/'+Date.now())
+//     let patient_ref  = firebase.database().ref('Patients/'+patientId)
+//     patient_ref.on("value", function(data){
+//               console.log(data.val())
+//               values = {[patientId]:data.val()}
+//               dealer_ref.set(values,function(){
+//                   console.log("added")
+//               })
+//     })
 
-    swal("Request Sent", "Please wait for the supplier to contact you!!", "success");
+//     swal("Request Sent", "Please wait for the supplier to contact you!!", "success");
   
-    elem.disabled=true
-      
-    
-}
+//     elem.disabled=true
+// }

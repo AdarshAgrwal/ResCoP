@@ -47,18 +47,18 @@ var firebaseConfig = {
 
   function getDealerInfo(){
     var dealerName = document.getElementById("dealername").value
-    var password = document.getElementById("password").value
-    var confirmpassword = document.getElementById("confirmpassword").value
-    var dealerDate = document.getElementById("dealerdate").value
-    var dealerEmail = document.getElementById("dealeremail").value
+    // var password = document.getElementById("password").value
+    // var confirmpassword = document.getElementById("confirmpassword").value
+    // var dealerDate = document.getElementById("dealerdate").value
+    // var dealerEmail = document.getElementById("dealeremail").value
     var dealerNo = document.getElementById("dealerno").value
-    var dealerOccupation = document.getElementById("occupation").value
+    // var dealerOccupation = document.getElementById("occupation").value
     var dealerState = document.getElementById("sts").value
     var dealerCity = document.getElementById("state").value
-    var dealerPincode = document.getElementById("Pincode").value
+    // var dealerPincode = document.getElementById("Pincode").value
    
     
-    console.log(password,confirmpassword)
+    // console.log(password,confirmpassword)
 
     var Remdisiver = document.getElementById("remdisiver")
     if (Remdisiver.checked){
@@ -138,43 +138,43 @@ var firebaseConfig = {
       console.log(Meals)
     }
 
-    if (password===confirmpassword){
-    firebase.auth().createUserWithEmailAndPassword(dealerEmail, password)
-      .then((user) => {
-        alert('Login successfully');
+//     if (password===confirmpassword){
+//     firebase.auth().createUserWithEmailAndPassword(dealerEmail, password)
+//       .then((user) => {
+//         alert('Login successfully');
        
-        // Signed in 
-        // ...
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
-        } 
-        else if (errorCode == 'auth/email-already-in-use') {
-          alert('The email is already taken.');
-        } 
-        else {
-          alert("Failed");
-          // alert(errorMessage);
-        }
-        // alert("failed");
-    });
+//         // Signed in 
+//         // ...
+//       })
+//       .catch((error) => {
+//         var errorCode = error.code;
+//         var errorMessage = error.message;
+//         if (errorCode == 'auth/weak-password') {
+//           alert('The password is too weak.');
+//         } 
+//         else if (errorCode == 'auth/email-already-in-use') {
+//           alert('The email is already taken.');
+//         } 
+//         else {
+//           alert("Failed");
+//           alert(errorMessage);
+//         }
+//         alert("failed");
+//     });
 
-}
-else {
-  alert("Passwords don't match")
-}
+// }
+// else {
+//   alert("Passwords don't match")
+// }
 
-firebase.auth().onAuthStateChanged(user => {
-  if (user) 
-  {
+// firebase.auth().onAuthStateChanged(user => {
+//   if (user) 
+  
     //  console.log(user.uid) 
     var personalInfo={
       Name: dealerName,
-      DOB:dealerDate,
-      Email:dealerEmail,
+      // DOB:dealerDate,
+      // Email:dealerEmail,
       Phone: dealerNo,
    
     
@@ -182,7 +182,7 @@ firebase.auth().onAuthStateChanged(user => {
     var location = {
       State: dealerState,
       City:dealerCity,
-      Pincode: dealerPincode
+      // Pincode: dealerPincode
     
     }
     var request = {
@@ -197,14 +197,13 @@ firebase.auth().onAuthStateChanged(user => {
     }
     var data = {PersonalInfo: personalInfo, Location:location, Services:request }
       console.log(data)
-      firebase.database().ref('Dealers/' + user.uid).set(data,function(){
+      firebase.database().ref('Dealers/').push(data,function(){
         console.log("added")
-        window.location="./dashboard.html";
-      })
-    
-  }
-})
-    
+        swal("Thank You!", "You have been successfully Registered! Please Wait someone might contact you shortly", "success")
+        setTimeout(function(){
+          window.location = './index.html'
+        },3000)
+      }) 
   }
 
  

@@ -38,17 +38,17 @@ function validate() {
 function getPatientData(){
 
 var patientName = document.getElementById("patientname").value
-var patientDate = document.getElementById("patientdate").value
-var patientEmail = document.getElementById("patientemail").value
-var patientNo = document.getElementById("patientno").value
-var patientAadhar = document.getElementById("aadharno").value
-var patientOccupation = document.getElementById("Occupation").value
+// var patientDate = document.getElementById("patientdate").value
+// var patientEmail = document.getElementById("patientemail").value
+// var patientNo = document.getElementById("patientno").value
+// var patientAadhar = document.getElementById("aadharno").value
+// var patientOccupation = document.getElementById("Occupation").value
 var patientState = document.getElementById("sts").value
 var patientCity = document.getElementById("state").value
-var patientPincode = document.getElementById("Pincode").value
-var patientBloodGrp = document.getElementById("Bloodgrp").value
+// var patientPincode = document.getElementById("Pincode").value
+// var patientBloodGrp = document.getElementById("Bloodgrp").value
 
-sessionStorage.setItem("aadharno",patientAadhar)
+// sessionStorage.setItem("aadharno",patientAadhar)
 
 
 console.log(patientState,patientCity)
@@ -137,18 +137,18 @@ var firebaseRef = firebase.database().ref("/Patients")
 
 var personalInfo={
 Name: patientName,
-DOB:patientDate,
-Email:patientEmail,
-Phone: patientNo,
-BloodGrp: patientBloodGrp,
-AadharNo: patientAadhar,
-Occupation:patientOccupation
+// DOB:patientDate,
+// Email:patientEmail,
+// Phone: patientNo,
+// BloodGrp: patientBloodGrp,
+// AadharNo: patientAadhar,
+// Occupation:patientOccupation
 
 }
 var location = {
 State: patientState,
 City:patientCity,
-Pincode: patientPincode
+// Pincode: patientPincode
 
 }
 var request = {

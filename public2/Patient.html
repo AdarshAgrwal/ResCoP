@@ -41,115 +41,117 @@
 </head>
 
 <body>
-    <!--::header part start::-->
-    <header class="main_menu">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="/"> <img src="./public/img/logo.png" alt="logo" style="margin-right: 5px;">ResCoP</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+<!--::header part start::-->
+<header class="main_menu">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                  <a class="navbar-brand" href="/"> <img src="./public/img/logo.png" alt="logo" style="margin-right: 5px;">ResCoP </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
 
-                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
-                            id="navbarSupportedContent">
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="services.html">Services</a>
-                                </li>
-                                 -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Patient.html">Patient</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Dealer
-                                    </a>
-                                    <div class="dropdown-menu" style="font-family: Playfair Display, serif;font-size: 14px;" aria-labelledby="navbarDropdown">
-                                      <a class="dropdown-item" href="login.html">Login</a>
-                                      <a class="dropdown-item" href="signup.html">Signup</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                       
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header part end-->
+                  <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                      id="navbarSupportedContent">
+                      <ul class="navbar-nav align-items-center">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Patient.html">Patient</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="signup.html">Dealer</a>
+                          </li>
+                          <!-- <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Dealer
+                              </a>
+                              <div class="dropdown-menu" style="font-family: Playfair Display, serif;font-size: 14px;" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="login.html">Login</a>
+                                  <a class="dropdown-item" href="signup.html">Signup</a>
+                              </div>
+                          </li> -->
+                      </ul>
+                  </div>
+                  
+              </nav>
+          </div>
+      </div>
+  </div>
+</header>
+<!-- Header part end-->
 <section class="appointment">
 <div class="container">
     <div class="row align-items-center justify-content-center"> 
         <div class="col-12 col-lg-6">
 <form id="patientForm">
-  <h6 > Personal Details </h6><hr style="padding-bottom: 15px;"/>
+  <h6 > Personal Details </h6>
+  <p style="color: red;">The fields having * are required</p>
+  <hr style="padding-bottom: 15px;"/>
+  
     <div class="form-group row">
-      <label for="patientname" class="col-sm-2 col-form-label">Name</label>
+      <label for="patientname" class="col-sm-2 col-form-label">Name<subscript style="color: red;">*</subscript> </label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="patientname" name="patientname" required>
       </div>
     </div>
-    <div class="form-group row">
+    <!-- <div class="form-group row">
       <label for="patientdate" class="col-sm-2 col-form-label">DOB</label>
       <div class="col-sm-10">
-        <input type="date" class="form-control" id="patientdate" name="patientdate" required>
+        <input type="date" class="form-control" id="patientdate" name="patientdate" >
       </div>
     </div>
     <div class="form-group row">
       <label for="patientemail" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="patientemail" name="patientemail" required>
+        <input type="email" class="form-control" id="patientemail" name="patientemail" >
       </div>
     </div>
     <div class="form-group row">
         <label for="patientno" class="col-sm-2 col-form-label">Phone Number</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="patientno" name="patientno" required>
+          <input type="text" class="form-control" id="patientno" name="patientno">
         </div>
       </div>
       <div class="form-group row">
         <label for="aadharno" class="col-sm-2 col-form-label">Aadhar No.</label>
         <div class="col-sm-10">
-          <input type="number" class="form-control" id="aadharno" name="aadharno" required>
+          <input type="number" class="form-control" id="aadharno" name="aadharno">
         </div>
       </div>
       <div class="form-group row">
         <label for="Occupation" class="col-sm-2 col-form-label">Prof.</label>
         <div class="col-sm-10">
-          <select class="form-control" name= "Occupation" id="Occupation" required>
+          <select class="form-control" name= "Occupation" id="Occupation" >
             <option value="Organization">Individual</option>
             <option value="NGO">NGO</option>
             <option value="Hospital">Hospital</option>
             <option value="Individual">Organization</option>
           </select>
         </div>
-      </div>
+      </div> -->
 
       <h6 > Location </h6><hr style="padding-bottom: 15px;"/>
       <div class="form-group row">
-        <label for="State" class="col-sm-2 col-form-label">State</label>
+        <label for="State" class="col-sm-2 col-form-label">State<subscript style="color: red;">*</subscript></label>
         <div class="col-sm-10">
           <!-- <input type="text" class="form-control" id="State" name="State" required> -->
           <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
         </div>
       </div>
       <div class="form-group row">
-        <label for="City" class="col-sm-2 col-form-label">City</label>
+        <label for="City" class="col-sm-2 col-form-label">City<subscript style="color: red;">*</subscript></label>
         <div class="col-sm-10">
          
           <select id ="state" class="form-control" required></select>
           <script language="javascript">print_state("sts");</script>
         </div>
       </div>
-      <div class="form-group row">
+      <!-- <div class="form-group row">
         <label for="Pincode" class="col-sm-2 col-form-label">Pin Code</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="Pincode" name="Pincode" required>
@@ -160,10 +162,12 @@
         <div class="col-sm-10">
           <input type="text" class="form-control" id="Bloodgrp" name="Bloodgrp" required>
         </div>
-      </div>
+      </div> -->
       
 
-      <h6 > Requirement </h6><hr style="padding-bottom: 15px;"/>
+      <h6 > Requirement </h6>
+      <p style="color: red;">Choose one or more services that you require</p>
+      <hr style="padding-bottom: 15px;"/>
       <div class="form-group row">
         <label for="oxygencylinder" class="col-sm-9 col-form-label">Oxygen Cylinder</label>
         <div class="col-sm-3">

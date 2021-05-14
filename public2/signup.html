@@ -46,88 +46,88 @@
 </head>
 
 <body>
-    <!--::header part start::-->
-    <header class="main_menu">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="/"> <img src="./public/img/logo.png" alt="logo" style="margin-right: 5px;">ResCoP </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+<!--::header part start::-->
+<header class="main_menu">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                  <a class="navbar-brand" href="/"> <img src="./public/img/logo.png" alt="logo" style="margin-right: 5px;">ResCoP </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
 
-                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
-                            id="navbarSupportedContent">
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="services.html">Services</a>
-                                </li> -->
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Patient.html">Patient</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Dealer
-                                    </a>
-                                    <div class="dropdown-menu" style="font-family: Playfair Display, serif;font-size: 14px;" aria-labelledby="navbarDropdown">
-                                      <a class="dropdown-item" href="login.html">Login</a>
-                                      <a class="dropdown-item" href="signup.html">Signup</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                       
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header part end-->
+                  <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                      id="navbarSupportedContent">
+                      <ul class="navbar-nav align-items-center">
+                          <li class="nav-item active">
+                              <a class="nav-link" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Patient.html">Patient</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="signup.html">Dealer</a>
+                          </li>
+                          <!-- <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Dealer
+                              </a>
+                              <div class="dropdown-menu" style="font-family: Playfair Display, serif;font-size: 14px;" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="login.html">Login</a>
+                                  <a class="dropdown-item" href="signup.html">Signup</a>
+                              </div>
+                          </li> -->
+                      </ul>
+                  </div>
+                  
+              </nav>
+          </div>
+      </div>
+  </div>
+</header>
+<!-- Header part end-->
 <section class="signup">
 <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
         <h4 class="card-title mt-3 text-center">Create Account</h4>
         <p class="text-center">Get started with your free account</p>
+        <p style="color:red" class="text-center">The fields with * are required</p>
         
         <p class="divider-text">
             <span class="bg-light"><hr class="divider"></span>
         </p>
         <form>
             <div class="form-group">
-                <label for="dealername">Name</label>
+                <label for="dealername">Name<subscript style="color: red;">*</subscript></label>
                 <input type="text" class="form-control" id="dealername" name="dealername" required>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
           </div>
           <div class="form-group">
             <label for="confirmpassword">Confirm Password</label>
             <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
-        </div>
-            <div class="form-group">
+        </div> -->
+            <!-- <div class="form-group">
               <label for="dealerdate">Date of Birth</label>
               <input type="date" class="form-control" id="dealerdate" name="dealerdate" required>
-            </div> 
+            </div>  -->
             <!-- <div class="form-group">
               <label for="Aadharno">Aadhar no</label>
               <input type="text" class="form-control" id="Aadharno" name="Aadharno" required>
             </div> -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="dealeremail">Email address</label>
               <input type="email" class="form-control" id="dealeremail" name="dealeremail" required>
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
+            </div> -->
             <div class="form-group">
-                <label for="dealerno">Mobile no.</label>
-                <input type="number" class="form-control" id="dealerno" name="dealerno" required>
+                <label for="dealerno">Mobile no.<subscript style="color: red;">*</subscript></label>
+                <input type="number" class="form-control" id="dealerno" name="dealerno" required/>
             </div>
             <!-- <div class="form-group">
               <label for="address">Address</label>
@@ -142,7 +142,7 @@
                   <option value="Other">Other</option>
                 </select>
               </div>   -->
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="form-check-label">Occupation</label>
                 <br>
                 <select name="occupation" required id="occupation">
@@ -151,27 +151,28 @@
                   <option value="NGO">NGO</option>
                   <option value="Individual">Individual</option>
                 </select>
-              </div>   
+              </div>    -->
               
               <div class="form-group">
-                <label for="State">State</label>
+                <label for="State">State<subscript style="color: red;">*</subscript></label>
                 <!-- <input type="text" class="form-control" id="State" name="State" value="Optional"> -->
                 <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
               </div>
               <div class="form-group">
-                <label for="City">City</label>
+                <label for="City">City<subscript style="color: red;">*</subscript></label>
                 <!-- <input type="text" class="form-control" id="City" name="City" value="Optional"> -->
                 <select id ="state" class="form-control" required></select>
                 <script language="javascript">print_state("sts");</script>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="Pincode">Pincode</label>
                 <input type="text" class="form-control" id="Pincode" name="Pincode">
-              </div>
+              </div> -->
               <p class="divider-text">Services
+                <p style="color:red">Choose one or more services that you supply</p>
                 <span class="bg-light"><hr class="divider"></span>
             </p>
-
+            
             <div class="form-group row">
               <label for="oxygencylinder" class="col-sm-9 col-form-label">Oxygen Cylinder</label>
               <div class="col-sm-3">
@@ -345,6 +346,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 <!-- Data AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
 AOS.init();
@@ -369,9 +371,6 @@ AOS.init();
     //     return false;
     //   }
     // }
-    function shukriya (){swal("Thank You!", "You have been successfully Registered!", "success")
-          setTimeout(function(){
-            window.location.href = "/login";
-          },8000)}
+    // function shukriya (){}
   </script>
   
