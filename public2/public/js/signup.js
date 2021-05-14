@@ -197,7 +197,7 @@ var firebaseConfig = {
     }
     var data = {PersonalInfo: personalInfo, Location:location, Services:request }
       console.log(data)
-      firebase.database().ref('Dealers/').push(data,function(){
+      firebase.database().ref('Dealers/'+dealerNo).set(data,function(){
         console.log("added")
         swal("Thank You!", "You have been successfully Registered! Please Wait someone might contact you shortly", "success")
         setTimeout(function(){
