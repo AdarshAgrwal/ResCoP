@@ -43,17 +43,17 @@ var patientName = document.getElementById("patientname").value
 // var patientNo = document.getElementById("patientno").value
 // var patientAadhar = document.getElementById("aadharno").value
 // var patientOccupation = document.getElementById("Occupation").value
-var patientState = document.getElementById("sts").value
-var patientCity = document.getElementById("state").value
+var patientState = document.getElementById("loc").value
+// var patientCity = document.getElementById("state").value
 // var patientPincode = document.getElementById("Pincode").value
 // var patientBloodGrp = document.getElementById("Bloodgrp").value
 
 // sessionStorage.setItem("aadharno",patientAadhar)
 
 
-console.log(patientState,patientCity)
-window.localStorage.setItem(document.getElementById("sts").id,patientState)
-window.localStorage.setItem(document.getElementById("state").id,patientCity)
+console.log(patientState)
+window.localStorage.setItem(document.getElementById("loc").id,patientState)
+// window.localStorage.setItem(document.getElementById("state").id,patientCity)
 
 var Remdisiver = document.getElementById("remdisiver")
 if (Remdisiver.checked){
@@ -146,8 +146,7 @@ Name: patientName,
 
 }
 var location = {
-State: patientState,
-City:patientCity,
+State: patientState
 // Pincode: patientPincode
 
 }

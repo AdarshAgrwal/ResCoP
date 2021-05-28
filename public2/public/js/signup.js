@@ -8,43 +8,43 @@ var firebaseConfig = {
   };
 
   firebase.initializeApp(firebaseConfig);
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) 
-    {
-       console.log(user.uid) 
-       setTimeout(()=>{
-         window.location="./dashboard.html"
-       },3000)
+  // firebase.auth().onAuthStateChanged(user => {
+  //   if (user) 
+  //   {
+  //      console.log(user.uid) 
+  //      setTimeout(()=>{
+  //        window.location="./dashboard.html"
+  //      },3000)
 
       
-    }
-  })
-  $(document).ready(function() {
-    validate();
-    $('input').on('keyup', validate);
-    $("#submitButton").on('click',getDealerInfo)
-  });
+  //   }
+  // })
+  // $(document).ready(function() {
+  //   validate();
+  //   $('input').on('keyup', validate);
+  //   $("#submitButton").on('click',getDealerInfo)
+  // });
   
-  function validate() {
-    var inputsWithValues = 0;
+  // function validate() {
+  //   var inputsWithValues = 0;
     
-    // get all input fields except for type='submit'
-    var myInputs = $("input:not([type='checkbox'])");
+  //   // get all input fields except for type='submit'
+  //   var myInputs = $("input:not([name='dealername'])");
   
-    myInputs.each(function(e) {
-      // if it has a value, increment the counter
-      if ($(this).val()) {
-        inputsWithValues += 1;
-      }
-    });
+  //   myInputs.each(function(e) {
+  //     // if it has a value, increment the counter
+  //     if ($(this).val()) {
+  //       inputsWithValues += 1;
+  //     }
+  //   });
   
-    if (inputsWithValues == myInputs.length) {
-      $("#submitButton").prop("disabled", false);
-    } else {
-      $("#submitButton").prop("disabled", true);
-    }
-  }
-
+  //   if (inputsWithValues-1 == myInputs.length) {
+  //     $("#submitButton").prop("disabled", false);
+  //   } else {
+  //     $("#submitButton").prop("disabled", true);
+  //   }
+  // }
+   var dealerName="", dealerNo="",dealerLoc=""
   function getDealerInfo(){
     var dealerName = document.getElementById("dealername").value
     // var password = document.getElementById("password").value
@@ -53,9 +53,12 @@ var firebaseConfig = {
     // var dealerEmail = document.getElementById("dealeremail").value
     var dealerNo = document.getElementById("dealerno").value
     // var dealerOccupation = document.getElementById("occupation").value
-    var dealerState = document.getElementById("sts").value
-    var dealerCity = document.getElementById("state").value
+    // var dealerState = document.getElementById("sts").value
+    // var dealerCity = document.getElementById("state").value
     // var dealerPincode = document.getElementById("Pincode").value
+    var dealerLoc = document.getElementById("loc").value
+    var dealerRemark = document.getElementById("remark").value
+    console.log(dealerRemark)
    
     
     // console.log(password,confirmpassword)
@@ -176,12 +179,12 @@ var firebaseConfig = {
       // DOB:dealerDate,
       // Email:dealerEmail,
       Phone: dealerNo,
+      Remark: dealerRemark
    
     
     }
     var location = {
-      State: dealerState,
-      City:dealerCity,
+       State:dealerLoc
       // Pincode: dealerPincode
     
     }
@@ -196,14 +199,24 @@ var firebaseConfig = {
       Meals:Meals
     }
     var data = {PersonalInfo: personalInfo, Location:location, Services:request }
-      console.log(data)
-      firebase.database().ref('Dealers/'+dealerNo).set(data,function(){
-        console.log("added")
-        swal("Thank You!", "You have been successfully Registered! Please Wait someone might contact you shortly", "success")
-        setTimeout(function(){
-          window.location = './index.html'
-        },3000)
-      }) 
+      
+      
+    sendData(data, dealerNo)
   }
 
+function sendData(data,dealerNo) {
+  if (dealerNo != "") {
+    console.log(data)
+    firebase.database().ref('Dealers/'+dealerNo).set(data,function(){
+      console.log("added")
+      swal("Thank You!", "You have been successfully Registered! Please Wait someone might contact you shortly", "success")
+      setTimeout(function(){
+        location.reload()
+      },3000)
+    }) 
+  }
+  else {
+    alert("Please add a Phone Number")
+  }
+  }
  

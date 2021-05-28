@@ -135,22 +135,37 @@
         </div>
       </div> -->
 
-      <h6 > Location </h6><hr style="padding-bottom: 15px;"/>
+      <!-- <h6 > Location </h6><hr style="padding-bottom: 15px;"/>
       <div class="form-group row">
         <label for="State" class="col-sm-2 col-form-label">State<subscript style="color: red;">*</subscript></label>
-        <div class="col-sm-10">
+        <div class="col-sm-10"> -->
           <!-- <input type="text" class="form-control" id="State" name="State" required> -->
-          <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
+          <!-- <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
+        </div>
+      </div> -->
+     
+      <div class="form-group row">
+        <label for="loc" class="col-sm-2 col-form-label">Location<subscript style="color: red;">*</subscript> </label>
+        <div class="col-sm-10">
+          <select class="form-control" id="loc" aria-label="Default select example">
+          
+            <option value="Delhi">Delhi</option>
+            <option value="Delhi-NCR">Delhi-NCR</option>
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Faridabad">Faridabad</option>
+            <option value="Ghaziabad">Ghaziabad</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
         </div>
       </div>
-      <div class="form-group row">
+      <!-- <div class="form-group row">
         <label for="City" class="col-sm-2 col-form-label">City<subscript style="color: red;">*</subscript></label>
         <div class="col-sm-10">
          
           <select id ="state" class="form-control" required></select>
           <script language="javascript">print_state("sts");</script>
         </div>
-      </div>
+      </div> -->
       <!-- <div class="form-group row">
         <label for="Pincode" class="col-sm-2 col-form-label">Pin Code</label>
         <div class="col-sm-10">

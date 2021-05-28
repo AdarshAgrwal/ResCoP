@@ -93,7 +93,7 @@
 <div class="card bg-light">
     <article class="card-body mx-auto" style="max-width: 400px;">
         <h4 class="card-title mt-3 text-center">Dealer Registration</h4>
-        <p class="text-center">If you're a supplier kindly register</p>
+        <p class="text-center">If you're a supplier or volunteer kindly register</p>
         <p style="color:red" class="text-center">The fields with * are required</p>
         
         <p class="divider-text">
@@ -101,7 +101,7 @@
         </p>
         <form>
             <div class="form-group">
-                <label for="dealername">Name<subscript style="color: red;">*</subscript></label>
+                <label for="dealername">Name</label>
                 <input type="text" class="form-control" id="dealername" name="dealername" required>
             </div>
             <!-- <div class="form-group">
@@ -129,6 +129,7 @@
                 <label for="dealerno">Mobile no.<subscript style="color: red;">*</subscript></label>
                 <input type="number" class="form-control" id="dealerno" name="dealerno" required/>
             </div>
+           
             <!-- <div class="form-group">
               <label for="address">Address</label>
               <input type="text" class="form-control" id="address" name="address" value="Optional">
@@ -153,26 +154,42 @@
                 </select>
               </div>    -->
               
-              <div class="form-group">
-                <label for="State">State<subscript style="color: red;">*</subscript></label>
+              <!-- <div class="form-group">
+                <label for="State">State<subscript style="color: red;">*</subscript></label> -->
                 <!-- <input type="text" class="form-control" id="State" name="State" value="Optional"> -->
-                <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
+                <!-- <select onchange="print_city('state', this.selectedIndex);" class="form-control" id="sts" name ="stt" required></select>
               </div>
               <div class="form-group">
-                <label for="City">City<subscript style="color: red;">*</subscript></label>
+                <label for="City">City<subscript style="color: red;">*</subscript></label> -->
                 <!-- <input type="text" class="form-control" id="City" name="City" value="Optional"> -->
-                <select id ="state" class="form-control" required></select>
+                <!-- <select id ="state" class="form-control" required></select>
                 <script language="javascript">print_state("sts");</script>
-              </div>
+              </div> -->
               <!-- <div class="form-group">
                 <label for="Pincode">Pincode</label>
                 <input type="text" class="form-control" id="Pincode" name="Pincode">
               </div> -->
+              <div class="form-group">
+                <label for="loc">Location<subscript style="color: red;">*</subscript></label>
+                <select class="form-control" id="loc" aria-label="Default select example">
+                  
+                  <option value="Delhi">Delhi</option>
+                  <option value="Delhi-NCR">Delhi-NCR</option>
+                  <option value="Gurgaon">Gurgaon</option>
+                  <option value="Faridabad">Faridabad</option>
+                  <option value="Ghaziabad">Ghaziabad</option>
+                  <option value="Mumbai">Mumbai</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dealerno">Remark (if any)</label>
+                <textarea class="form-control" id="remark" name="remark" ></textarea>
+            </div><br>
               <p class="divider-text">Services
                 <p style="color:red">Choose one or more services that you supply</p>
                 <span class="bg-light"><hr class="divider"></span>
             </p>
-            
+           
             <div class="form-group row">
               <label for="oxygencylinder" class="col-sm-9 col-form-label">Oxygen Cylinder</label>
               <div class="col-sm-3">

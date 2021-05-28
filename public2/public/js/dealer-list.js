@@ -26,14 +26,14 @@ var firebaseConfig = {
       })
   }
   localStorageData.forEach((a)=>{
-    if(Object.keys(a)[0] === "sts") {
+    if(Object.keys(a)[0] === "loc") {
         state = (Object.values(a)[0])
     }
-    if(Object.keys(a)[0] === "state") {
-        city = (Object.values(a)[0])
-    }
+    // if(Object.keys(a)[0] === "state") {
+    //     city = (Object.values(a)[0])
+    // }
 })
-console.log( city)
+// console.log( city)
 console.log(state)
 
 /* Getting the Data from the Firebase Database of Dealers */
@@ -61,7 +61,10 @@ var count = 0
 setTimeout(()=>{
     registeredKeys.forEach((key)=>{
         var rootaf = document.getElementById("rootaf")
-        if(registeredData[key].Location.State === state && registeredData[key].Location.City === city ){
+        if (registeredData[key].PersonalInfo.Remark == undefined) {
+            registeredData[key].PersonalInfo.Remark =""
+        }
+        if(registeredData[key].Location.State === state  ){
             // console.log(true)
             count += 1 
             services = []
@@ -83,13 +86,16 @@ setTimeout(()=>{
                 services .push("Tocilizumab")
             }
             // console.log(services)
+            
             rootaf.innerHTML += `
             <div class=" col-12 col-md-6">
             <div class='card m-3'>
                 <div class='card-body'>
                     <h4>Name: ${registeredData[key].PersonalInfo.Name}</h4>
-                    <p><b> Mobile No: ${registeredData[key].PersonalInfo.Phone}</b></p>
-                    <p style="word-break: break-word;">Services: ${services} </p>
+                    <p><b> Mobile No:</b> ${registeredData[key].PersonalInfo.Phone}</p>
+                   
+                    <p style="word-break: break-word;"><b>Services:</b> ${services} </p>
+                    <p><b> Remark:</b> ${registeredData[key].PersonalInfo.Remark}</p>
                 </div>
                </div>
             </div>`
